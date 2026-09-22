@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The portfolio of a product-minded developer building useful digital experiences.">
+    <title>Priyanka Gautam — Developer & Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="wordmark" href="index.html" aria-label="Priyanka Gautam home"><span>PG</span><strong>Priyanka Gautam</strong></a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu <span>+</span></button>
+            <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+                <a class="active" href="index.html">Home</a>
+                <a href="work.html">Work <sup>05</sup></a>
+                <a href="about.html">About</a>
+                <a href="journal.html">Journal</a>
+                <a class="nav-contact" href="mailto:hello@priyankagautam.dev">Let's talk <span>↗</span></a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero home-hero">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Developer · Designer · Curious mind</p>
+                    <h1>I make digital things <em>feel</em> human.</h1>
+                    <p class="hero-intro">I’m Priyanka, a developer and builder turning complex ideas into clear, useful experiences. Currently exploring the space between thoughtful design and intelligent technology.</p>
+                    <div class="hero-actions"><a class="button button-dark" href="work.html">Explore my work <span>↗</span></a><a class="text-link" href="about.html">A little about me <span>→</span></a></div>
+                </div>
+                <div class="hero-art reveal delay-1">
+                    <div class="portrait-frame"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85" alt="A creative team collaborating around a table" fetchpriority="high"></div>
+                    <p class="art-note">Based in India<br><span>Available worldwide</span></p>
+                    <span class="orbit-word">BUILD<br>WITH<br>CARE</span>
+                </div>
+            </section>
+
+            <section class="marquee" aria-label="What I do"><div class="marquee-track"><span>PRODUCT THINKING</span><i>✳</i><span>FRONTEND CRAFT</span><i>✳</i><span>DATA & AI</span><i>✳</i><span>PRODUCT THINKING</span><i>✳</i><span>FRONTEND CRAFT</span><i>✳</i><span>DATA & AI</span></div></section>
+
+            <section class="section featured-section">
+                <div class="section-heading"><div><p class="eyebrow">Selected work</p><h2>A few things I’ve<br><em>made recently.</em></h2></div><a class="text-link" href="work.html">See all projects <span>↗</span></a></div>
+                <div class="project-grid">
+                    <a class="project-card project-large reveal" href="work.html#signal"><div class="project-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85" alt="Analytics dashboard on a laptop"></div><div class="project-meta"><span>01 / Product & Data</span><h3>Signal Room</h3><p>A calmer way to understand the numbers that move your business.</p></div></a>
+                    <a class="project-card reveal delay-1" href="work.html#fieldnotes"><div class="project-image image-tall"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=85" alt="Notebook and coffee on a creative desk"></div><div class="project-meta"><span>02 / Editorial platform</span><h3>Field Notes</h3><p>A home for questions worth sitting with.</p></div></a>
+                </div>
+            </section>
+
+            <section class="statement-section"><div class="statement-mark">✳</div><p>“Good work lives at the intersection of <em>clarity, curiosity,</em> and a willingness to keep asking better questions.”</p><a class="text-link" href="about.html">More about my approach <span>→</span></a></section>
+
+            <section class="section journal-preview"><div class="section-heading"><div><p class="eyebrow">From the journal</p><h2>Notes from<br><em>the process.</em></h2></div><a class="text-link" href="journal.html">Read all notes <span>↗</span></a></div><div id="home-posts" class="post-list"></div></section>
+        </main>
+
+        <footer class="site-footer"><div><span class="footer-glyph">PG</span><p>Thoughtful digital work,<br>from idea to interface.</p></div><div class="footer-links"><a href="mailto:hello@priyankagautam.dev">Email ↗</a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com" target="_blank" rel="noreferrer">GitHub ↗</a></div><small>© 2026 Priyanka Gautam</small></footer>
+    </div>
+    <script src="js/data.js"></script><script src="js/main.js"></script>
+</body>
+</html>
