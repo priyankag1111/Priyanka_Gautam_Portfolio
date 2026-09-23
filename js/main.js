@@ -17,7 +17,58 @@
 
     const renderPost = (post) => `<article class="post-card reveal"><small>${post.date} · ${post.category}</small><h3>${post.title}</h3><p>${post.excerpt}</p><a class="text-link" href="journal.html">Read note <span>↗</span></a></article>`;
     const homePosts = document.getElementById("home-posts");
-    if (homePosts) homePosts.innerHTML = data.posts.slice(0, 3).map(renderPost).join("");
+    if (homePosts) homePosts.innerHTML = data.posts.slice(0, 1).map(renderPost).join("");
+
+    const renderRetailMetrics = (report) => {
+        const container = document.getElementById("retail-metrics");
+        if (!container || !report) return;
+
+        const money = (value) => `₹${Number(value || 0).toLocaleString("en-IN")}`;
+        const avgMargin = report.performance?.avg_margin_pct ?? 0;
+        const revenue = report.performance?.total_revenue ?? 0;
+        const capital = report.inventory_alerts?.excess_capital_tied_up ?? 0;
+        const risk = report.inventory_alerts?.stockout_est_revenue_at_risk ?? 0;
+        const recs = report.pricing_recommendations?.length ?? 0;
+
+        container.innerHTML = `
+            <article class="retail-card">
+                <div class="label">Revenue</div>
+                <div class="value">${money(revenue)}</div>
+                <div class="meta">Trailing 30 days</div>
+            </article>
+            <article class="retail-card">
+                <div class="label">Avg margin</div>
+                <div class="value">${avgMargin}%</div>
+                <div class="meta">Portfolio margin health</div>
+            </article>
+            <article class="retail-card">
+                <div class="label">Excess stock</div>
+                <div class="value">${money(capital)}</div>
+                <div class="meta">Capital tied up</div>
+            </article>
+            <article class="retail-card">
+                <div class="label">Pricing actions</div>
+                <div class="value">${recs}</div>
+                <div class="meta">Recommended changes</div>
+            </article>
+        `;
+    };
+
+    const loadRetailMetrics = async () => {
+        const container = document.getElementById("retail-metrics");
+        if (!container) return;
+
+        try {
+            const response = await fetch("http://127.0.0.1:5000/api/retail-summary", { mode: "cors" });
+            if (!response.ok) throw new Error("Backend unavailable");
+            const report = await response.json();
+            renderRetailMetrics(report);
+        } catch (error) {
+            container.innerHTML = '<div class="retail-status">Live agent data is not connected yet. Start the backend at http://127.0.0.1:5000/api/retail-summary to enable the live metrics.</div>';
+        }
+    };
+
+    loadRetailMetrics();
 
     const journalPosts = document.getElementById("journal-posts");
     if (journalPosts) journalPosts.innerHTML = data.posts.map(renderPost).join("");

@@ -1,0 +1,93 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Retail Merchandising Agent Dashboard</title>
+  <desc id="desc">Dashboard mockup showing revenue, margin, excess stock, pricing recommendations, and inventory alerts.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f1720"/>
+      <stop offset="100%" stop-color="#192c39"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#d9ef55"/>
+      <stop offset="100%" stop-color="#f0b36a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <rect x="60" y="50" width="1280" height="800" rx="24" fill="#101d2a" stroke="#2a4059"/>
+  <text x="95" y="110" fill="#dfeaf7" font-size="32" font-family="Arial, sans-serif" font-weight="700">ACME Retail Intelligence</text>
+  <text x="95" y="145" fill="#9db2c9" font-size="17" font-family="Arial, sans-serif">Merchant-agent read layer: performance, inventory alerts, and pricing recommendations</text>
+
+  <g>
+    <rect x="95" y="180" width="260" height="110" rx="16" fill="#162b40" stroke="#2d455e"/>
+    <text x="118" y="220" fill="#9bb0c8" font-size="14" font-family="Arial, sans-serif">Revenue</text>
+    <text x="118" y="260" fill="#d9ef55" font-size="32" font-family="Arial, sans-serif" font-weight="700">₹812,926</text>
+
+    <rect x="385" y="180" width="260" height="110" rx="16" fill="#162b40" stroke="#2d455e"/>
+    <text x="408" y="220" fill="#9bb0c8" font-size="14" font-family="Arial, sans-serif">Margin</text>
+    <text x="408" y="260" fill="#f0b36a" font-size="32" font-family="Arial, sans-serif" font-weight="700">45.4%</text>
+
+    <rect x="675" y="180" width="260" height="110" rx="16" fill="#162b40" stroke="#2d455e"/>
+    <text x="698" y="220" fill="#9bb0c8" font-size="14" font-family="Arial, sans-serif">Excess stock</text>
+    <text x="698" y="260" fill="#f6d3a0" font-size="28" font-family="Arial, sans-serif" font-weight="700">₹417,446</text>
+
+    <rect x="965" y="180" width="260" height="110" rx="16" fill="#162b40" stroke="#2d455e"/>
+    <text x="988" y="220" fill="#9bb0c8" font-size="14" font-family="Arial, sans-serif">Pricing actions</text>
+    <text x="988" y="260" fill="#9ae6c5" font-size="32" font-family="Arial, sans-serif" font-weight="700">23</text>
+  </g>
+
+  <g>
+    <rect x="95" y="335" width="560" height="260" rx="18" fill="#14273b" stroke="#2d415b"/>
+    <rect x="120" y="363" width="510" height="35" rx="10" fill="#1a2f49"/>
+    <text x="140" y="386" fill="#dfeaf7" font-size="18" font-family="Arial, sans-serif" font-weight="700">Top performers</text>
+    <g fill="#dfeaf7" font-size="17" font-family="Arial, sans-serif">
+      <text x="140" y="445">Running Shoe A</text>
+      <text x="430" y="445" text-anchor="end">₹44,380</text>
+      <line x1="140" y1="457" x2="510" y2="457" stroke="#2d4359" stroke-width="2"/>
+
+      <text x="140" y="495">Track Pant</text>
+      <text x="430" y="495" text-anchor="end">₹40,769</text>
+      <line x1="140" y1="507" x2="510" y2="507" stroke="#2d4359" stroke-width="2"/>
+
+      <text x="140" y="545">Casual Sneaker</text>
+      <text x="430" y="545" text-anchor="end">₹37,907</text>
+    </g>
+
+    <rect x="745" y="335" width="560" height="260" rx="18" fill="#14273b" stroke="#2d415b"/>
+    <rect x="770" y="363" width="510" height="35" rx="10" fill="#1a2f49"/>
+    <text x="790" y="386" fill="#dfeaf7" font-size="18" font-family="Arial, sans-serif" font-weight="700">Fastest declining</text>
+    <g fill="#dfeaf7" font-size="17" font-family="Arial, sans-serif">
+      <text x="790" y="445">Cap</text>
+      <text x="1240" y="445" text-anchor="end">-44.4%</text>
+      <line x1="790" y1="457" x2="1220" y2="457" stroke="#2d4359" stroke-width="2"/>
+
+      <text x="790" y="495">Sunglasses</text>
+      <text x="1240" y="495" text-anchor="end">-43.0%</text>
+      <line x1="790" y1="507" x2="1220" y2="507" stroke="#2d4359" stroke-width="2"/>
+
+      <text x="790" y="545">Training Tee</text>
+      <text x="1240" y="545" text-anchor="end">-34.3%</text>
+    </g>
+  </g>
+
+  <g>
+    <rect x="95" y="630" width="1210" height="180" rx="18" fill="#14273b" stroke="#2d415b"/>
+    <rect x="120" y="655" width="1160" height="35" rx="10" fill="#1a2f49"/>
+    <text x="140" y="678" fill="#dfeaf7" font-size="18" font-family="Arial, sans-serif" font-weight="700">Pricing recommendations</text>
+    <g fill="#dfeaf7" font-size="16" font-family="Arial, sans-serif">
+      <text x="140" y="725">[hold_price_no_promo] Backpack</text>
+      <text x="460" y="725">ACME-MUM-02</text>
+      <text x="660" y="725">discount=0%</text>
+
+      <text x="140" y="760">[markdown] Casual Sneaker</text>
+      <text x="460" y="760">ACME-DEL-01</text>
+      <text x="660" y="760">discount=20%</text>
+
+      <text x="840" y="725">[markdown] Hoodie</text>
+      <text x="1080" y="725">ACME-MUM-02</text>
+      <text x="1250" y="725">discount=18%</text>
+
+      <text x="840" y="760">[hold_price_no_promo] Cotton Shirt</text>
+      <text x="1080" y="760">ACME-BLR-03</text>
+      <text x="1250" y="760">discount=0%</text>
+    </g>
+  </g>
+</svg>
