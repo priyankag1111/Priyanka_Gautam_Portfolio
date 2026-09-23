@@ -15,6 +15,24 @@
         if (link.getAttribute("href") === currentPage) link.classList.add("active");
     });
 
+    const emailCard = document.createElement("div");
+    emailCard.className = "email-card-backdrop";
+    emailCard.hidden = true;
+    emailCard.innerHTML = `<div class="email-card" role="dialog" aria-modal="true" aria-labelledby="email-card-title"><button class="email-card-close" type="button" aria-label="Close email card">&times;</button><p class="eyebrow">Let's connect</p><h2 id="email-card-title">Send me a note.</h2><p class="email-card-address">priyanka.apr@gmail.com</p><a class="button button-dark" href="mailto:priyanka.apr@gmail.com">Open email app <span>&#8599;</span></a></div>`;
+    document.body.appendChild(emailCard);
+
+    const closeEmailCard = () => { emailCard.hidden = true; };
+    document.querySelectorAll('.footer-links a[href^="mailto:"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            emailCard.hidden = false;
+            emailCard.querySelector(".email-card-close").focus();
+        });
+    });
+    emailCard.querySelector(".email-card-close").addEventListener("click", closeEmailCard);
+    emailCard.addEventListener("click", (event) => { if (event.target === emailCard) closeEmailCard(); });
+    document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !emailCard.hidden) closeEmailCard(); });
+
     const renderPost = (post) => `<article class="post-card reveal"><small>${post.date} · ${post.category}</small><h3>${post.title}</h3><p>${post.excerpt}</p><a class="text-link" href="journal.html">Read note <span>↗</span></a></article>`;
     const homePosts = document.getElementById("home-posts");
     if (homePosts) homePosts.innerHTML = data.posts.slice(0, 1).map(renderPost).join("");
