@@ -166,9 +166,15 @@ h1 em, h2 em, .statement-section em { font-family: var(--serif); font-weight: 60
 .impact-grid strong { font: 11px var(--mono); text-transform: uppercase; }
 .capability-section { display: grid; gap: 10%; grid-template-columns: .75fr 1.25fr; }
 .capability-section h2 { font-size: clamp(40px, 4vw, 60px); }
-.capability-columns { display: grid; gap: 30px; grid-template-columns: repeat(3, 1fr); }
-.capability-columns h3 { font-size: 18px; margin: 0 0 12px; }
-.capability-columns p { color: var(--muted); font-size: 14px; line-height: 1.55; margin: 0; }
+.capability-columns { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+.capability-card { border-top: 2px solid var(--ink); padding: 22px 22px 8px; }
+.capability-card:nth-child(2) { border-color: var(--orange); }
+.capability-card:nth-child(3) { border-color: var(--lime); }
+.capability-number { color: var(--orange); font: 11px var(--mono); }
+.capability-card h3 { font-size: 22px; letter-spacing: -.04em; margin: 24px 0 30px; }
+.keyword-group { border-top: 1px solid var(--line); display: grid; gap: 16px; grid-template-columns: .45fr 1fr; padding: 15px 0; }
+.keyword-group > span { color: var(--orange); font: 10px var(--mono); text-transform: uppercase; }
+.keyword-group p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
 .education-band { background: var(--ink); color: var(--paper); display: grid; gap: 10%; grid-template-columns: repeat(2, 1fr); padding: 90px max(5vw, calc((100vw - 1220px) / 2)); }
 .education-band .eyebrow { color: var(--lime); }
 .education-band p:not(.eyebrow) { color: rgba(251, 250, 246, .75); font-size: 14px; margin: 0 0 20px; }
