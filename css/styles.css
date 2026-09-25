@@ -166,12 +166,11 @@ h1 em, h2 em, .statement-section em { font-family: var(--serif); font-weight: 60
 .impact-grid strong { font: 11px var(--mono); text-transform: uppercase; }
 .capability-section { display: block; text-align: center; }
 .capability-section .section-heading { justify-content: center; text-align: center; }
-.capability-section h2 { font-size: clamp(40px, 4vw, 60px); margin-left: auto; margin-right: auto; }
+.capability-section h2 { border: 0; font-size: clamp(40px, 4vw, 60px); margin-left: auto; margin-right: auto; text-decoration: none; }
 .capability-columns { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); margin: 0 auto; max-width: 1120px; text-align: left; }
 .capability-card { border-top: 2px solid var(--ink); padding: 22px 22px 8px; }
 .capability-card:nth-child(2) { border-color: var(--orange); }
 .capability-card:nth-child(3) { border-color: var(--lime); }
-.capability-number { color: var(--orange); font: 11px var(--mono); }
 .capability-card h3 { font-size: 22px; letter-spacing: -.04em; margin: 24px 0 30px; }
 .keyword-group { border-top: 1px solid var(--line); display: grid; gap: 16px; grid-template-columns: .45fr 1fr; padding: 15px 0; }
 .keyword-group > span { color: var(--orange); font: 10px var(--mono); text-transform: uppercase; }
