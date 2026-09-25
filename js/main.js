@@ -91,8 +91,16 @@
     const journalPosts = document.getElementById("journal-posts");
     if (journalPosts) journalPosts.innerHTML = data.posts.map(renderPost).join("");
 
+    const projectDetail = document.getElementById("project-detail");
+    if (projectDetail) {
+        const projectId = new URLSearchParams(window.location.search).get("id");
+        const project = data.projects.find((item) => item.id === projectId) || data.projects[0];
+        document.title = `${project.title} — Priyanka Gautam`;
+        projectDetail.innerHTML = `<section class="project-detail-hero reveal"><div><p class="eyebrow">${project.number} / ${project.category}</p><h1>${project.title}</h1><p class="project-detail-lede">${project.description}</p><ul class="tags">${project.tags.map((tag) => `<li>${tag}</li>`).join("")}</ul></div><div class="project-detail-cover"><img src="${project.image}" alt="${project.title} project overview" fetchpriority="high"></div></section><section class="project-detail-body"><div class="project-detail-copy"><p class="eyebrow">The project</p>${(project.copy || [project.description]).map((paragraph) => `<p>${paragraph}</p>`).join("")}<a class="button button-dark" href="mailto:priyanka.apr@gmail.com?subject=${encodeURIComponent(project.title)}">Ask me about this project <span>&#8599;</span></a></div><div class="project-gallery"><p class="eyebrow">Project assets</p>${(project.gallery || [project.image]).map((image, index) => `<figure><img src="${image}" alt="${project.title} project asset ${index + 1}" loading="lazy"></figure>`).join("")}</div></section>`;
+    }
+
     const workList = document.getElementById("work-list");
-    if (workList) workList.innerHTML = data.projects.map((project) => `<article id="${project.id}" class="work-item reveal"><div class="work-image"><img src="${project.image}" alt="${project.title} project preview" loading="lazy"></div><div class="work-copy"><span class="work-index">${project.number} / ${project.category}</span><h2>${project.title}</h2><p>${project.description}</p>${(project.copy || []).map((paragraph) => `<p>${paragraph}</p>`).join("")}<ul class="tags">${project.tags.map((tag) => `<li>${tag}</li>`).join("")}</ul><a class="text-link" href="mailto:priyanka.apr@gmail.com?subject=${encodeURIComponent(project.title)}">Ask me about it <span>↗</span></a></div></article>`).join("");
+    if (workList) workList.innerHTML = data.projects.map((project) => `<article id="${project.id}" class="work-item reveal"><div class="work-image"><img src="${project.image}" alt="${project.title} project preview" loading="lazy"></div><div class="work-copy"><span class="work-index">${project.number} / ${project.category}</span><h2>${project.title}</h2><p>${project.description}</p><a class="text-link" href="project.html?id=${project.id}">View full project <span>↗</span></a></div></article>`).join("");
 
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
         if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }

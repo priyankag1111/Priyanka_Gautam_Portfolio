@@ -108,6 +108,20 @@ h1 em, h2 em, .statement-section em { font-family: var(--serif); font-weight: 60
 .case-study-results { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 12px; }
 .case-study-results li { border-top: 1px solid var(--line); padding-top: 12px; color: var(--ink); font: 13px var(--mono); letter-spacing: .02em; }
 .case-study-results strong { font-size: 18px; color: var(--orange); }
+.project-detail-hero { align-items: end; display: grid; gap: 8%; grid-template-columns: .85fr 1.15fr; margin: 0 auto; max-width: 1320px; padding: 95px 5vw 110px; }
+.project-detail-hero h1 { font-size: clamp(54px, 7vw, 100px); margin-bottom: 28px; }
+.project-detail-lede { color: var(--muted); font-size: 19px; line-height: 1.65; max-width: 500px; }
+.project-detail-cover { border: 1px solid var(--line); overflow: hidden; }
+.project-detail-cover img { aspect-ratio: 1.25 / .8; height: 100%; object-fit: cover; }
+.project-detail-body { display: grid; gap: 10%; grid-template-columns: .75fr 1.25fr; margin: 0 auto; max-width: 1320px; padding: 0 5vw 140px; }
+.project-detail-copy { padding-top: 12px; }
+.project-detail-copy p { color: var(--muted); font-size: 18px; line-height: 1.75; max-width: 510px; }
+.project-detail-copy .button { margin-top: 20px; }
+.project-gallery { display: grid; gap: 20px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.project-gallery .eyebrow { grid-column: 1 / -1; margin-bottom: 0; }
+.project-gallery figure { background: var(--cream); margin: 0; overflow: hidden; }
+.project-gallery figure:first-of-type { grid-column: 1 / -1; }
+.project-gallery img { height: auto; width: 100%; }
 
 .work-list { display: grid; gap: 100px; margin: 0 auto; max-width: 1320px; padding: 0 5vw 140px; }
 .work-item { display: grid; gap: 6%; grid-template-columns: 1.25fr .75fr; }
@@ -176,4 +190,8 @@ h1 em, h2 em, .statement-section em { font-family: var(--serif); font-weight: 60
     .page-hero h1 { font-size: clamp(53px, 14vw, 78px); }
     .experience-row { grid-template-columns: 1fr 1.5fr; }
     .experience-row p { grid-column: 2; }
+    .project-detail-hero, .project-detail-body { display: block; padding-bottom: 75px; padding-top: 65px; }
+    .project-detail-cover { margin-top: 45px; }
+    .project-detail-body { padding-top: 0; }
+    .project-gallery { margin-top: 70px; }
 }
