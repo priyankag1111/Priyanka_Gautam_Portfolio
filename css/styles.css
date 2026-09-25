@@ -164,9 +164,10 @@ h1 em, h2 em, .statement-section em { font-family: var(--serif); font-weight: 60
 .impact-grid h3 { font-family: var(--serif); font-size: 30px; margin: 34px 0 10px; }
 .impact-grid p { color: var(--muted); margin-bottom: 28px; max-width: 380px; }
 .impact-grid strong { font: 11px var(--mono); text-transform: uppercase; }
-.capability-section { display: grid; gap: 10%; grid-template-columns: .75fr 1.25fr; }
-.capability-section h2 { font-size: clamp(40px, 4vw, 60px); }
-.capability-columns { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+.capability-section { display: block; text-align: center; }
+.capability-section .section-heading { justify-content: center; text-align: center; }
+.capability-section h2 { font-size: clamp(40px, 4vw, 60px); margin-left: auto; margin-right: auto; }
+.capability-columns { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); margin: 0 auto; max-width: 1120px; text-align: left; }
 .capability-card { border-top: 2px solid var(--ink); padding: 22px 22px 8px; }
 .capability-card:nth-child(2) { border-color: var(--orange); }
 .capability-card:nth-child(3) { border-color: var(--lime); }
