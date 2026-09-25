@@ -92,7 +92,7 @@
     if (journalPosts) journalPosts.innerHTML = data.posts.map(renderPost).join("");
 
     const workList = document.getElementById("work-list");
-    if (workList) workList.innerHTML = data.projects.map((project) => `<article id="${project.id}" class="work-item reveal"><div class="work-image"><img src="${project.image}" alt="${project.title} project preview" loading="lazy"></div><div class="work-copy"><span class="work-index">${project.number} / ${project.category}</span><h2>${project.title}</h2><p>${project.description}</p><ul class="tags">${project.tags.map((tag) => `<li>${tag}</li>`).join("")}</ul><a class="text-link" href="mailto:hello@priyankagautam.dev?subject=${encodeURIComponent(project.title)}">Ask me about it <span>↗</span></a></div></article>`).join("");
+    if (workList) workList.innerHTML = data.projects.map((project) => `<article id="${project.id}" class="work-item reveal"><div class="work-image"><img src="${project.image}" alt="${project.title} project preview" loading="lazy"></div><div class="work-copy"><span class="work-index">${project.number} / ${project.category}</span><h2>${project.title}</h2><p>${project.description}</p>${(project.copy || []).map((paragraph) => `<p>${paragraph}</p>`).join("")}<ul class="tags">${project.tags.map((tag) => `<li>${tag}</li>`).join("")}</ul><a class="text-link" href="mailto:priyanka.apr@gmail.com?subject=${encodeURIComponent(project.title)}">Ask me about it <span>↗</span></a></div></article>`).join("");
 
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
         if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }
